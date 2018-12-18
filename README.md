@@ -9,10 +9,10 @@ permission.</b>
 
 Usage: fanfic.py [-h] [-c CHAPTER] story_id
 
-positional arguments:
+positional arguments:  
   story_id              Id of the story. (fanfiction.net/s/<story_id>/)
 
-optional arguments:
-  -h, --help            show this help message and exit
-  -c CHAPTER, --chapter CHAPTER
+optional arguments:  
+  -h, --help            show this help message and exit  
+  -c CHAPTER, --chapter CHAPTER  
                         Number of the chapter to download
