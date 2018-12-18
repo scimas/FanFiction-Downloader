@@ -117,17 +117,21 @@ def saveChapter(sid, chapNum):
     print("Chapter has been saved in a directory named " + title)
 
 
-parser = argparse.ArgumentParser(description="Download stories from FanFiction.net")
+parser = argparse.ArgumentParser(description="Download stories from FanFiction.net",
+                                 usage="%(prog)s [options]")
 parser.add_argument("story_id",
                     type=int,
                     help="Id of the story. (fanfiction.net/s/<story_id>/)")
 parser.add_argument("-c", "--chapter",
                     type=int,
-                    help="Number of the chapter to download")
+                    nargs="+",
+                    metavar="N",
+                    help="Number(s) of the chapter to download")
 
 args = parser.parse_args()
 
 if args.chapter:
-    saveChapter(args.story_id, args.chapter)
+    for num in args.chapter:
+        saveChapter(args.story_id, num)
 else:
     saveStory(args.story_id)

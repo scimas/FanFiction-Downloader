@@ -7,13 +7,13 @@ files under a directory named with the title of the story.
 <b>This is for personal use only. Never redistribute a story without the author's
 permission.</b>
 ```
-Usage: fanfic.py [-h] [-c CHAPTER] story_id
+Usage: fanfic.py [options]
 
 positional arguments:  
   story_id              Id of the story. (fanfiction.net/s/<story_id>/)
 
 optional arguments:  
   -h, --help            show this help message and exit  
-  -c CHAPTER, --chapter CHAPTER  
-                        Number of the chapter to download
+  -c N [N ...], --chapter N [N ...]  
+                        Number(s) of the chapter to download
 ```
